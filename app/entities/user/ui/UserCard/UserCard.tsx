@@ -1,4 +1,6 @@
-import { type User } from '../../model/types';
+import Image from "next/image";
+
+import { type User } from "../../model/types";
 
 export interface UserCardProps {
   user: User;
@@ -10,15 +12,17 @@ export const UserCard = ({ user, onClick }: UserCardProps) => {
     <div
       onClick={onClick}
       className={`p-4 border rounded-lg shadow-sm hover:shadow-md transition-shadow ${
-        onClick ? 'cursor-pointer' : ''
+        onClick ? "cursor-pointer" : ""
       }`}
     >
       <div className="flex items-center gap-3">
         {user.avatar ? (
-          <img
+          <Image
+            width={48}
+            height={48}
             src={user.avatar}
             alt={user.name}
-            className="w-12 h-12 rounded-full"
+            className="w-12 h-12 rounded-full object-cover"
           />
         ) : (
           <div className="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 font-semibold">
@@ -33,4 +37,3 @@ export const UserCard = ({ user, onClick }: UserCardProps) => {
     </div>
   );
 };
-
