@@ -20,6 +20,7 @@ export const AuthProcess = () => {
   useEffect(() => {
     // 프로세스 단계에 따른 로직
     // 실제로는 features/login, features/register 등을 조합
+
     console.log("Auth Process Step:", step);
   }, [step]);
 

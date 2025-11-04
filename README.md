@@ -24,32 +24,48 @@ Feature-Sliced Design 패턴을 따릅니다. 자세한 내용은 [FSD_STRUCTURE
 - `features` → `entities`, `shared`
 - `entities` → `shared`
 
+### Package Manager
+
+이 프로젝트는 **pnpm**을 사용합니다.
+
+```bash
+# pnpm 설치 (전역)
+npm install -g pnpm
+
+# 또는
+corepack enable
+corepack prepare pnpm@latest --activate
+```
+
 ### Scripts
 
 ```bash
+# 의존성 설치
+pnpm install
+
 # 개발 서버 실행
-npm run dev
+pnpm dev
 
 # 빌드
-npm run build
+pnpm build
 
 # 린트 검사
-npm run lint
+pnpm lint
 
 # 린트 자동 수정
-npm run lint:fix
+pnpm lint:fix
 
 # 코드 포맷팅
-npm run format
+pnpm format
 
 # 테스트 실행
-npm run test
+pnpm test
 
 # 테스트 감시 모드
-npm run test:watch
+pnpm test:watch
 
 # 테스트 UI
-npm run test:ui
+pnpm test:ui
 ```
 
 ### Git Hooks (Husky)
